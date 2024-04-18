@@ -1,4 +1,4 @@
-import { curve, heroBackground, robot } from "../assets";
+import { heroBackground, robot } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
@@ -7,7 +7,7 @@ import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
-import CompanyLogos from "./CompanyLogos";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -22,22 +22,32 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+          <div className=" min-h-24 mb-3" >
+
           <h1 className="h1 mb-6">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
-            <span className="inline-block relative">
-              Brainwave{" "}
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
-            </span>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Unlimited Memory, Anywhere",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "Privacy at the Forefront",
+                1000,
+                "Fortified Security, Always",
+                1000,
+                "Simple Pricing, No Surprises",
+                1000,
+              ]}
+              wrapper="span"
+              speed={20}
+              // style={{ fontSize: '1em', display: 'inline-block' }}
+              repeat={Infinity}
+            />
+            
           </h1>
+          </div>
+          
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
+          Enhance Your Media Workflow with MemoriaSync, the Ultimate Photo Video Sync Application.
           </p>
           <Button href="/pricing" white>
             Get started
@@ -51,7 +61,7 @@ const Hero = () => {
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
                   src={robot}
-                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
+                  className="w-full bg-cover scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
                   height={490}
                   alt="AI"
@@ -72,7 +82,7 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Code generation"
+                    title="Store with Team"
                   />
                 </ScrollParallax>
               </div>
@@ -93,7 +103,6 @@ const Hero = () => {
           <BackgroundCircles />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>
 
       <BottomLine />

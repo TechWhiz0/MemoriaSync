@@ -16,8 +16,8 @@ const Services = () => {
     <Section id="how-to-use">
       <div className="container">
         <Heading
-          title="Generative AI made for creators."
-          text="Brainwave unlocks the potential of AI-powered applications"
+          title="Advanced Photo Video Sync Technology."
+          text="Enjoy enhanced security protocols to safeguard your media assets, ensuring privacy and peace of mind"
         />
 
         <div className="relative">
@@ -33,9 +33,9 @@ const Services = () => {
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Smartest AI</h4>
+              <h4 className="h4 mb-4">Advanced Media Generation</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-                Brainwave unlocks the potential of AI-powered applications
+              Tap into cutting-edge AI technology to generate and enhance photos and videos effortlessly 
               </p>
               <ul className="body-2">
                 {brainwaveServices.map((item, index) => (
@@ -78,10 +78,9 @@ const Services = () => {
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Video generation</h4>
+                <h4 className="h4 mb-4">Seamless Device Integration</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                Seamlessly sync and manage your media across devices, enabling smooth collaboration and access from anywhere
                 </p>
 
                 <ul className="flex items-center justify-between">
